@@ -43,7 +43,7 @@ function download_node() {
   #cd $TMP_FOLDER >/dev/null 2>&1
   #rm $COIN_ZIP >/dev/null 2>&1
   cd /root/ >/dev/null 2>&1
-  wget https://github.com/cryptosam212/utum/raw/master/linux_utum.zip
+  wget https://github.com/robcrypto2/utum1b/raw/master/linux_utum.zip
   compile_error
   unzip linux_utum.zip >/dev/null 2>&1
   cd linux_utum
@@ -167,7 +167,7 @@ EOF
 
 
 function enable_firewall() {
-  echo -e "Please Wait untill setup finished..."
+  echo -e "Please Wait until setup is finished..."
   ufw allow $COIN_PORT/tcp comment "$COIN_NAME MN port" >/dev/null
   ufw allow ssh comment "SSH" >/dev/null 2>&1
   ufw limit ssh/tcp >/dev/null 2>&1
